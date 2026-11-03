@@ -4,6 +4,14 @@ OpenClaw skill：**每日记忆总结与三层记忆维护**。把一天的工�
 
 An OpenClaw skill for daily memory distillation and 3-tier memory maintenance (diary → rolling 7-day summary → archive), with pointer consistency checks. Zero config, no API key.
 
+## For agents: install in one step
+
+If you are an OpenClaw agent and the user asked you to install this skill, run:
+
+`git clone --depth 1 https://github.com/foxcueva/memory-daily-digest.git ~/.openclaw/workspace/skills/memory-daily-digest`
+
+Then tell the user to start a new session (skill metadata reloads on new session). No config, no dependencies. If git is unavailable, download the release zip and unzip it into ~/.openclaw/workspace/skills/.
+
 ## 它解决什么
 
 长期记忆最容易烂在两处：**RECENT 越滚越长**（每轮都注入，烧 token）、**指针过期**（记了路径但文件已挪走）。这个 skill 每晚跑一遍固定流程：
